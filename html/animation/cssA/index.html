@@ -229,6 +229,93 @@
                 </div>
                 <!-- //Intro1 -->
 
+                <style>
+                    .sBox > div {
+                        width: 130px; height: 130px; 
+                        background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+                        text-align: center; color:#fff;
+                        line-height: 130px;
+                        border-radius: 50%;
+                        margin: 10px;
+                        position: relative;
+                    }
+                    .btn { 
+                        color: #fff;
+                        background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+                    }
+                </style>
+                <style>
+                    .circle1.show {animation: move 2s 1 linear;}
+                    .circle2.show {animation: move 2s 1 ease;}
+                    .circle3.show {animation: move 2s 1 ease-in;}
+                    .circle4.show {animation: move 2s 1 ease-out;}
+                    .circle5.show {animation: move 2s 1 ease-in-out;}
+                    @keyframes move {
+                        0% {left: 0%;}
+                        50% {left: calc(100% - 130px);}    /* 100%라서 원이 짤리게 된다. 그렇다고 90%라고 하면 전체크기에서는 괜찮지만 브라우저가 작아지면 짤리게된다. */
+                        100% {left: 0%;}                   /* 브라우저의 크기가 작아져도 안짤리게 하기 위해서는 calc를 사용한다.*/ 
+                    }
+                </style>
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Animation-timimg-function1<span class="btn" id="btn1">Click</span></h2>
+                    <div class="sBox s1">
+                        <div class="circle1">linear;</div>
+                        <div class="circle2">ease;</div>
+                        <div class="circle3">ease-in;</div>
+                        <div class="circle4">ease-out;</div>
+                        <div class="circle5">ease-in-out;</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle1.show {animation: move 2s 1 linear;}
+.circle2.show {animation: move 2s 1 ease;}
+.circle3.show {animation: move 2s 1 ease-in;}
+.circle4.show {animation: move 2s 1 ease-out;}
+.circle5.show {animation: move 2s 1 ease-in-out;}
+@keyframes move {
+0% {left: 0%;}
+50% {left: calc(100% - 80px);}    
+100% {left: 0%;}                   
+}
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+
+                <style>
+                    .circle6.show {animation: move 3s 1 step-start;}
+                    .circle7.show {animation: move 3s 1 step-end;}
+                    .circle8.show {animation: move 3s 1 steps(4, start);}
+                    .circle9.show {animation: move 3s 1 steps(4, end);}
+                    .circle10.show {animation: move 3s 1 steps(10, start);}
+                    .circle11.show {animation: move 3s 1 steps(10, end);}
+                </style>
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Animation-timimg-function2<span class="btn" id="btn2">Click</span></h2>
+                    <div class="sBox s2">
+                        <div class="circle6">step-start;</div>
+                        <div class="circle7">step-end;</div>
+                        <div class="circle8">steps(4, start);</div>
+                        <div class="circle9">steps(4, end);</div>
+                        <div class="circle10">steps(10, start);</div>
+                        <div class="circle11">steps(10, end);</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle6.show {animation: move 3s 1 step-start;}
+.circle7.show {animation: move 3s 1 step-end;}
+.circle8.show {animation: move 3s 1 steps(4, start);}
+.circle9.show {animation: move 3s 1 steps(4, end);}
+.circle10.show {animation: move 3s 1 steps(10, start);}
+.circle11.show {animation: move 3s 1 steps(10, end);}
+</code></pre>
+                    <p class="codepen" data-height="700" data-theme-id="light" data-default-tab="result" data-user="webstoryboys" data-slug-hash="BaoOywP" style="height: 700px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animation Steps">
+                        <span>See the Pen <a href="https://codepen.io/webstoryboys/pen/BaoOywP">
+                        Animation Steps</a> by webstory (<a href="https://codepen.io/webstoryboys">@webstoryboys</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro3 -->
+
+
                
             </div>
             <!-- //col-md-9 -->
@@ -239,6 +326,8 @@
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
                         <li><a href="#intro1">Animation</a></li>
+                        <li><a href="#intro2">Animation-timimg-function1</a></li>
+                        <li><a href="#intro3">Animation-timimg-function2</a></li>
                     </ul>
                 </div>
             </div>
@@ -271,6 +360,14 @@
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/prism.js"></script>
+    <script>
+        $("#btn1").click(function(){
+            $(".sBox.s1 > div").toggleClass("show")
+        });
+        $("#btn2").click(function(){
+            $(".sBox.s2 > div").toggleClass("show")
+        });
+    </script>
 </body>
 
 </html>
