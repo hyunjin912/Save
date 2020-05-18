@@ -28,33 +28,69 @@
             padding-left: 330px;
         }
         .contents {
-            width: 1920px;
             margin: 300px auto 400px;
             
         }
         .content-item {
+            position: relative;
             width: 1000px;
-            background: rgba(255,255,255,0.3);
             margin: 200px 0 300px;
         }
         .content-item:nth-child(even) {
             margin-left: auto;
         }
-        .content-item-num {}
-        .content-item-title {}
-        .content-item-imgWrap {}
-        .content-item-img {}
-        .content-item-desc {}
+        .content-item-num {
+            font-size: 350px;
+            font-weight: 100;
+            position: absolute; right: 0; top: -200px;
+            opacity: 0.04;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto; left: -100px;
+        }
+        .content-item-title {
+            text-align: right;
+            font-size: 24px;
+            font-weight: 300;
+            color: #999;
+            padding-bottom: 10px;
+            text-transform: capitalize;
+        }
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
+        .content-item-imgWrap {
+            position: relative;
+            padding-bottom: 57%;
+            overflow: hidden;
+        }
+        .content-item-img {
+            height: 550px;
+            position: absolute; top: 0;
+            width: 100%;
+            background-size: cover;
+            background-position: 50% 0;
+        }
+        .content-item-desc {
+            font-size: 80px;
+            line-height: 1.2;
+            font-weight: 600;
+            text-align: right;
+            word-break: keep-all;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+        }
 
         #section1 .content-item-img {background-image: url(img/p1.jpg);}
-        #section2 .content-item-img {background-image: url(img/p1.jpg);}
-        #section3 .content-item-img {background-image: url(img/p1.jpg);}
-        #section4 .content-item-img {background-image: url(img/p1.jpg);}
-        #section5 .content-item-img {background-image: url(img/p1.jpg);}
-        #section6 .content-item-img {background-image: url(img/p1.jpg);}
-        #section7 .content-item-img {background-image: url(img/p1.jpg);}
-        #section8 .content-item-img {background-image: url(img/p1.jpg);}
-        #section9 .content-item-img {background-image: url(img/p1.jpg);}
+        #section2 .content-item-img {background-image: url(img/p2.jpg);}
+        #section3 .content-item-img {background-image: url(img/p3.jpg);}
+        #section4 .content-item-img {background-image: url(img/p4.jpg);}
+        #section5 .content-item-img {background-image: url(img/p5.jpg);}
+        #section6 .content-item-img {background-image: url(img/p6.jpg);}
+        #section7 .content-item-img {background-image: url(img/p7.jpg);}
+        #section8 .content-item-img {background-image: url(img/p8.jpg);}
+        #section9 .content-item-img {background-image: url(img/p9.jpg);}
     </style>
 </head>
 <body>
