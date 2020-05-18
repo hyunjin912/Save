@@ -231,10 +231,10 @@
 
                 <style>
                     .sBox > div {
-                        width: 130px; height: 130px; 
+                        width: 60px; height: 60px; 
                         background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
                         text-align: center; color:#fff;
-                        line-height: 130px;
+                        line-height: 60px;
                         border-radius: 50%;
                         margin: 10px;
                         position: relative;
@@ -260,11 +260,11 @@
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">Animation-timimg-function1<span class="btn" id="btn1">Click</span></h2>
                     <div class="sBox s1">
-                        <div class="circle1">linear;</div>
-                        <div class="circle2">ease;</div>
-                        <div class="circle3">ease-in;</div>
-                        <div class="circle4">ease-out;</div>
-                        <div class="circle5">ease-in-out;</div>
+                        <div class="circle1">circle1</div>
+                        <div class="circle2">circle2</div>
+                        <div class="circle3">circle3</div>
+                        <div class="circle4">circle4</div>
+                        <div class="circle5">circle5</div>
                     </div>
 <pre class="line-numbers language-css"><code>.circle1.show {animation: move 2s 1 linear;}
 .circle2.show {animation: move 2s 1 ease;}
@@ -292,12 +292,12 @@
                 <div class="bs-docs-section">
                     <h2 id="intro3" class="page-header">Animation-timimg-function2<span class="btn" id="btn2">Click</span></h2>
                     <div class="sBox s2">
-                        <div class="circle6">step-start;</div>
-                        <div class="circle7">step-end;</div>
-                        <div class="circle8">steps(4, start);</div>
-                        <div class="circle9">steps(4, end);</div>
-                        <div class="circle10">steps(10, start);</div>
-                        <div class="circle11">steps(10, end);</div>
+                        <div class="circle6">circle6</div>
+                        <div class="circle7">circle7</div>
+                        <div class="circle8">circle8</div>
+                        <div class="circle9">circle9</div>
+                        <div class="circle10">circle10</div>
+                        <div class="circle11">circle11</div>
                     </div>
 <pre class="line-numbers language-css"><code>.circle6.show {animation: move 3s 1 step-start;}
 .circle7.show {animation: move 3s 1 step-end;}
@@ -315,6 +315,88 @@
                 </div>
                 <!-- //Intro3 -->
 
+                <style>
+                    .circle12.show {animation: move 3s 10 cubic-bezier(0,0,0,0);}
+                    .circle13.show {animation: move 3s 10 cubic-bezier(0,.52,1,-0.16);}
+                    .circle14.show {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66);}
+                    .circle15.show {animation: move 3s 10 cubic-bezier(1,.35,.1,1.26);}
+                    .circle16.show {animation: move 3s 10 cubic-bezier(1,-0.05,1,.85);}
+                </style>
+                 <!-- Intro4 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Animation-timimg-function : Cubic-bezier<span class="btn" id="btn3">Click</span></h2>
+                    <div class="sBox s3">
+                        <div class="circle12">circle12</div>
+                        <div class="circle13">circle13</div>
+                        <div class="circle14">circle14</div>
+                        <div class="circle15">circle15</div>
+                        <div class="circle16">circle16</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle12.show {animation: move 3s 10 cubic-bezier(0,0,0,0);}
+.circle13.show {animation: move 3s 10 cubic-bezier(0,.52,1,-0.16);}
+.circle14.show {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66);}
+.circle15.show {animation: move 3s 10 cubic-bezier(1,.35,.1,1.26);}
+.circle16.show {animation: move 3s 10 cubic-bezier(1,-0.05,1,.85);}
+</code></pre>    
+                </div>
+                <!-- //Intro4 -->
+
+                <style>
+                    .circle17.show {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.1s;}
+                    .circle18.show {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.2s;}
+                    .circle19.show {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.3s;}
+                    .circle20.show {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s;}
+                </style>
+                 <!-- Intro5 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Animation-delay<span class="btn" id="btn4">Click</span></h2>
+                    <div class="sBox s4">
+                        <div class="circle17">circle17</div>
+                        <div class="circle18">circle18</div>
+                        <div class="circle19">circle19</div>
+                        <div class="circle20">circle20</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle17 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.1s;}
+.circle18 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.2s;}
+.circle19 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.3s;}
+.circle20 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s;}
+</code></pre>    
+                </div>
+                <!-- //Intro5 -->
+
+                <style>
+                    .sBox.s5 {height: 500px;}
+                    .circle21.normal {animation: move2 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s normal;}
+                    .circle21.reverse {animation: move2 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s reverse;}
+                    .circle21.alternate {animation: move2 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s alternate;}
+                    .circle21.alternate-reverse {animation: move2 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s alternate-reverse;}
+                    @keyframes move2 {
+                        0% {left: 0; top: 0;}
+                        25% {left: calc(100% - 80px); top: 0;}
+                        50% {left: calc(100% - 80px); top: calc(100% - 80px);}
+                        75% {left: 0; top: calc(100% - 80px);}
+                        100% {left: 0; top: 0;}
+                    }
+                </style>
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Animation-direction
+                        <span class="btn" id="btn5-1">normal</span>
+                        <span class="btn" id="btn5-2">reverse</span>
+                        <span class="btn" id="btn5-3">alternate</span>
+                        <span class="btn" id="btn5-4">alternate-reverse</span>
+                    </h2>
+                    <div class="sBox s5">
+                        <div class="circle21">circle21</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle17 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.1s;}
+.circle18 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.2s;}
+.circle19 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.3s;}
+.circle20 {animation: move 3s 10 cubic-bezier(.89,1.16,.54,-0.66) 0.4s;}
+</code></pre>    
+                </div>
+                <!-- //Intro6 -->
+
 
                
             </div>
@@ -328,6 +410,8 @@
                         <li><a href="#intro1">Animation</a></li>
                         <li><a href="#intro2">Animation-timimg-function1</a></li>
                         <li><a href="#intro3">Animation-timimg-function2</a></li>
+                        <li><a href="#intro4">Animation-timimg-function : Cubic-bezier</a></li>
+                        <li><a href="#intro5">Animation-delay</a></li>
                     </ul>
                 </div>
             </div>
@@ -364,8 +448,27 @@
         $("#btn1").click(function(){
             $(".sBox.s1 > div").toggleClass("show")
         });
+
         $("#btn2").click(function(){
             $(".sBox.s2 > div").toggleClass("show")
+        });
+
+        $("#btn3").click(function(){
+            $(".sBox.s3 > div").toggleClass("show")
+        });
+
+        $("#btn4").click(function(){
+            $(".sBox.s4 > div").toggleClass("show")
+        });
+
+        //btn5-1을 클릭하면 글씨 색을 빨간색으로 변경하세요~~
+        $("#btn5-1").click(function(){
+            $(this).css("color","red");
+        });
+
+        //btn5-1을 클릭하면 컨텐츠 요소(텍스트)를 alert으로 표현해주세요~~
+        $("#btn5-1").click(function(){
+            alert($(this).text());
         });
     </script>
 </body>
