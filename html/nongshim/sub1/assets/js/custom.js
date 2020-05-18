@@ -27,7 +27,7 @@
 //    centeredSlides: true,
 //})
  var swiper = new Swiper('.swiper-container', {
-//     slidesPerView: 1,
+      slidesPerView: 3,
       scrollbar: {
         el: '.swiper-scrollbar',
         hide: false,
