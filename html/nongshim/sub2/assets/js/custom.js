@@ -26,10 +26,12 @@
 //    slidesPerView: 'auto',
 //    centeredSlides: true,
 //})
- var swiper = new Swiper('.swiper-container', {
-//     slidesPerView: 1,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-      },
-    });
+var mySwiper3 = new Swiper('#banner .swiper-container', {
+  loop: true,
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+});

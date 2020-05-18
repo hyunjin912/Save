@@ -58,7 +58,7 @@
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 33.3333% !important;
+  width: 60%;
   position: relative;
   transition-property: transform;
 }
