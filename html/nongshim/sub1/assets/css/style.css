@@ -8,6 +8,9 @@
     width: 100%;
     background: #fff;
 }
+#header.on {
+  position: fixed; top: -157px; 
+}
 /* 헤더 */
 .header {
     display: -webkit-box;
@@ -118,6 +121,9 @@
     height: 70px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-sizing: border-box;
+}
+#nav2-wrap.on {
+  position: fixed; top: -80px; 
 }
 .nav2-container {
     position: relative;
