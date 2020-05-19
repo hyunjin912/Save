@@ -322,9 +322,7 @@ ul.tag-wrap li:nth-child(10) a:hover {
 }
 
 /* 탭 */
-#tabs {
-    height: 200px;
-}
+#tabs {}
 ul.tab-menu {
     text-align: center;
     border-bottom: 2px solid #e8e8e8;
@@ -339,11 +337,11 @@ ul.tab-menu li a {
     color: #636262;
     font-size: 16px;
     font-weight: bold;
-    padding: 20px 20px;
+    padding: 20px 30px;
 }
 ul.tab-menu li a span {
     border-right: 1px solid #e8e8e8;
-    padding-right: 20px;
+    padding-right: 60px;
 }
 ul.tab-menu li:last-child a span {
     border: none;
