@@ -50,7 +50,7 @@
 .header .nav li a span {
     position: relative;
 }
-.header .nav li a span::before {
+.header .nav li a span::before { 
     content: '';
     display: block;
     position: absolute; bottom: -3px; left: 50%;
@@ -178,19 +178,145 @@
     font-weight: 600;
     text-align: center;
 }
+.ad-wrap {
+    padding-top: 30px;
+}
+/* 
 .swiper-slide.img1 {
     background-image: url(../img/ban1.jpg);
     background-size: cover;
+    background-position: center;
+    height: 732px; 
+    
+} */
+/* img2에는 안줬는데 적용 되는 이유는? */
+
+/* .swiper-slide.img2 {
+    background-image: url(../img/ban2.jpg);
+    background-size: cover;
+    background-position: center;
+} */
+
+
+/* .swiper-slide .banicon {
+    width: 46px;
+} */
+
+.swiper-slide a::before {
+    content:'';
+    width: 100%;
+    height: 732px; 
+    position: absolute; left: 0; top: 0;
+    background: rgba(0,0,0,0.4);
+}
+/* .swiper-slide a.shadow::before {
+    content:'';
+    width: 100%;
+    height: 732px; 
+    position: absolute; left: 0; top: 0;
+    background: rgba(0,0,0,0.4);
+} */
+.swiper-slide a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 732px;
+    text-decoration: none;
+    color: #fff;
+}
+.swiper-slide.img1 {
+    background-image: url(../img/ban1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 732px;
 }
 .swiper-slide.img2 {
     background-image: url(../img/ban2.jpg);
     background-size: cover;
+    background-position: center;
+}
+.swiper-slide .ban-info .ban-icon img {
+    width: 46px;
+}
+.swiper-slide .ban-info .ban-icon {
+    position: absolute; left: 40px; top: 60px;
+}
+.swiper-slide .ban-info .ban-tit {
+    position: absolute; left: 40px; top: 120px;
+    font-size: 48px;
+    
 }
 
+/* 해시태그 */
+#hash-tag {}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+ul.tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 60px;
+    margin-bottom: 75px;
 
-
-
-
-
-
-
+}
+ul.tag-wrap li {
+    margin: 8px 15px;
+}
+ul.tag-wrap li a {
+    display: inline-block;
+    padding: 15px 27px;
+    font-size: 24px;
+    border: 2px solid #c3d9ab; 
+    border-radius: 36px;
+    line-height: 36px;
+    color: #666;
+    transition: all 0.3s
+}
+ul.tag-wrap li a:hover {
+    color: #666;
+    background-color: #e0ecde;
+    border-color: #e0ecde;
+}
+ul.tag-wrap li:nth-child(1) a {
+    background-color: #e0ecde;
+    border: 2px solid #e0ecde;
+}
+ul.tag-wrap li:nth-child(1) a:hover {
+    background-color: #fff;
+    border: 2px solid #c3d9ab;
+}
+ul.tag-wrap li:nth-child(3) a {
+    background-color: #e0ecde;
+    border: 2px solid #e0ecde;
+}
+ul.tag-wrap li:nth-child(3) a:hover {
+    background-color: #fff;
+    border: 2px solid #c3d9ab;
+}
+ul.tag-wrap li:nth-child(5) a {
+    background-color: #e0ecde;
+    border: 2px solid #e0ecde;
+}
+ul.tag-wrap li:nth-child(5) a:hover {
+    background-color: #fff;
+    border: 2px solid #c3d9ab;
+}
+ul.tag-wrap li:nth-child(8) a {
+    background-color: #e0ecde;
+    border: 2px solid #e0ecde;
+}
+ul.tag-wrap li:nth-child(8) a:hover {
+    background-color: #fff;
+    border: 2px solid #c3d9ab;
+}
+ul.tag-wrap li:nth-child(10) a {
+    background-color: #e0ecde;
+    border: 2px solid #e0ecde;
+}
+ul.tag-wrap li:nth-child(10) a:hover {
+    background-color: #fff;
+    border: 2px solid #c3d9ab;
+}
