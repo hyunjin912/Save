@@ -327,7 +327,7 @@ ul.tag-wrap li:nth-child(10) a:hover {
     border: 2px solid #c3d9ab;
 }
 
-/* 탭 */
+/* 탭 메뉴 부분 */
 #tabs {}
 ul.tab-menu {
     text-align: center;
@@ -345,6 +345,17 @@ ul.tab-menu li a {
     font-weight: bold;
     padding: 20px 30px;
 }
+ul.tab-menu li a.cir {
+    position: relative;
+}
+ul.tab-menu li a.cir::before {
+    content: '';
+    width: 8px; height: 8px; 
+    border-radius: 50%;
+    background: #e6001e;
+    position: absolute; left: 37%; top: 61px;
+    transform: translatex(-50%);
+}
 ul.tab-menu li a span {
     border-right: 1px solid #e8e8e8;
     padding-right: 60px;
@@ -355,4 +366,64 @@ ul.tab-menu li:last-child a span {
 }
 ul.tab-menu li a:hover {
     color: #636262;
+}
+
+/* 탭 내용 부분 */
+.tab-cont {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 25px;
+    row-gap: 60px;
+}
+.tab-cont li {
+}
+.tab-cont li a {
+    display: block;
+    height: 383px;
+    background-position: center ;
+    background-size: cover;
+}
+.tab-cont li:nth-child(3n) a {
+}
+.tab-cont li:nth-child(1) a {
+    background-image: url(../img/ad1.jpg);
+}
+.tab-cont li:nth-child(2) a {
+    background-image: url(../img/ad2.jpg);
+}
+.tab-cont li:nth-child(3) a {
+    background-image: url(../img/ad3.jpg);
+}
+.tab-cont li:nth-child(4) a {
+    background-image: url(../img/ad4.jpg);
+}
+.tab-cont li:nth-child(5) a {
+    background-image: url(../img/ad5.jpg);
+}
+.tab-cont li:nth-child(6) a {
+    background-image: url(../img/ad6.jpg);
+}
+.tab-cont li:nth-child(7) a {
+    background-image: url(../img/ad7.jpg);
+}
+.tab-cont li:nth-child(8) a {
+    background-image: url(../img/ad8.jpg);
+}
+.tab-cont li:nth-child(9) a {
+    background-image: url(../img/ad9.jpg);
+}
+.tab-cont li:nth-child(10) a {
+    background-image: url(../img/ad10.jpg);
+}
+.tab-cont li:nth-child(11) a {
+    background-image: url(../img/ad11.jpg);
+}
+.tab-cont li:nth-child(12) a {
+    background-image: url(../img/ad12.jpg);
+}
+.tab-cont img {
+    width: 46px;
+    position: relative; left: 20px; top: 20px;
 }

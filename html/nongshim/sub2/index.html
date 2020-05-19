@@ -198,15 +198,32 @@
     <section id="tabs">
         <div class="container">
             <ul class="tab-menu">
-                <li><a href="#"><span>VIEW ALL</span></a></li>
+                <li>
+                    <a class="cir" href="#"><span>VIEW ALL</span></a>
+                </li>
                 <li><a href="#"><span>HOME PAGE</span></a></li>
                 <li><a href="#"><span>FACEBOOK</span></a></li>
                 <li><a href="#"><span>INSTAGRAM</span></a></li>
                 <li><a href="#"><span>YOUTUBE</span></a></li>
                 <li><a href="#"><span>BLOG</span></a></li>
             </ul>
+            <ul class="tab-cont">
+                <li><a href="#"><img src="assets/img/ban-H.svg" alt="홈페이지"></a></li>
+                <li><a href="#"><img src="assets/img/blog.svg" alt="블로그"></a></li>
+                <li><a href="#"><img src="assets/img/instagram.svg" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="assets/img/blog.svg" alt="블로그"></a></li>
+                <li><a href="#"><img src="assets/img/facebook.svg" alt="페이스북"></a></li>
+                <li><a href="#"><img src="assets/img/ban-youtube.svg" alt="유튜브"></a></li>
+                <li><a href="#"><img src="assets/img/ban-youtube.svg" alt="유튜브"></a></li>
+                <li><a href="#"><img src="assets/img/ban-youtube.svg" alt="유튜브"></a></li>
+                <li><a href="#"><img src="assets/img/instagram.svg" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="assets/img/ban-H.svg" alt="홈페이지"></a></li>
+                <li><a href="#"><img src="assets/img/blog.svg" alt="블로그"></a></li>
+                <li><a href="#"><img src="assets/img/instagram.svg" alt="인스타그램"></a></li>
+            </ul>
         </div>
     </section>
+
          
   
 
@@ -261,6 +278,12 @@
         }
         lastScrollTop = wScroll;
         }
+
+        /* tab-circle */
+        $(".tab-menu li a").click(function(e){
+            e.preventDefault();
+            $(this).addClass("cir").parent().siblings().find("a").removeClass("cir");
+        });
     </script>
     
 </body>
