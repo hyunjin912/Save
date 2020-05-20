@@ -184,12 +184,12 @@
 
                  <!-- Intro2 -->
                  <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">Animation</h2>
+                    <h2 id="intro2" class="page-header">How to</h2>
                     <p class="bs-callout bs-callout-info">
-                        $("selector").animate( {properties} );
-                        $("selector").animate( {properties, duration} );
-                        $("selector").animate( {properties, duration, easing} );
-                        $("selector").animate( {properties, duration, easing, collback} );
+                        $("selector").animate( {properties} );<br>
+                        $("selector").animate( {properties, duration} );<br>
+                        $("selector").animate( {properties, duration, easing} );<br>
+                        $("selector").animate( {properties, duration, easing, collback} );<br>
                     </p>
                     <p>
                         properties: border, margin, padding, width, height, font-size, bottom, left, top, 
@@ -197,16 +197,95 @@
                         transform(x)
                     </p>
                     <p>
-                        //폰트 사이즈를 현재 크기에서 20px로 2초동안 애니메이션
-                        $("선택자").animate({"font-size":"20px"},2000);
-                        $("선택자").animate({fontSize:"20px"},2000);
+                        //폰트 사이즈를 현재 크기에서 20px로 2초동안 애니메이션<br>
+                        $("선택자").animate({"font-size":"20px"},2000);<br>
+                        $("선택자").animate({fontSize:"20px"},2000);<br>
                         
-                        //선택한 요소를 왼쪽, 오른쪽 마진값을 100px 0.6초동안 애니메이션
-                        $("선택자").animate({marginLeft:100, marginRight:100},600);
-                        $("선택자").animate({marginLeft:100, marginRight:100},"slow");
+                        //선택한 요소를 왼쪽, 오른쪽 마진값을 100px 0.6초동안 애니메이션<br>
+                        $("선택자").animate({marginLeft:100, marginRight:100},600);<br>
+                        $("선택자").animate({marginLeft:100, marginRight:100},"slow");<br>
                     </p>
                 </div>
                 <!-- //Intro2 -->
+
+                <style>
+                    .box {height: 300px; position: relative;}
+                    .circle1 {
+                        position: absolute;
+                        width: 50px; height: 50px; background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+                        border-radius: 50%;
+                    }
+                    .circle1.colorChange {
+                        background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+                    }
+                </style>
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Basic</h2>
+                    <h4>animation <span class="btn btn1">Start</span></h4>
+                    <div class="well">
+                        <div class="box">
+                            <div class="circle circle1"></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-html"><code>&lt;script&gt;
+    $(".btn1").click(function(){
+        $(".circle1").addClass("colorChange");
+        $(".circle1")
+        .animate( {left:"80%"},1000)
+        .animate( {top:"80%" },1000)
+        .animate( {left:"0%" },1000)
+        .animate( {top:"0%" },1000);
+    });
+&lt;/script&gt;
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <style>
+                    .box {height: 300px; position: relative;}
+                    .circle2 {
+                        position: absolute;
+                        width: 50px; height: 50px; background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+                        border-radius: 50%;
+                        animation: color 3s infinite alternate;
+                    }
+                    @keyframes color {
+                        25% {transform: rotate(0deg);}
+                        50% {transform: rotate(1500deg);}
+                        100% {transform: rotate(0deg);}
+                    }
+
+                </style>
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Timing-function</h2>
+                    <h4 class="btn2">animation 
+                        <button>easeOutBounce</button>  
+                        <button>easeInQuart</button>  
+                        <button>easeInBack</button> 
+                        <button>easeInOutBounce</button> 
+                        <button>easeOutSine</button> 
+                        <button>easeInCubic</button> 
+                    </h4>
+                    <div class="well">
+                        <div class="box">
+                            <div class="circle circle2"></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-html"><code>&lt;script&gt;
+    $(".btn2 &gt; button").click(function(){
+        let easing = $(this).text();
+        $(".circle2")
+        .animate( {left:"80%"},1000, easing)
+        .animate( {top:"80%" },1000, easing)
+        .animate( {left:"0%" },1000, easing)
+        .animate( {top:"0%" },1000, easing);
+    });
+&lt;/script&gt;
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
 
                
             </div>
@@ -218,7 +297,9 @@
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
                         <li><a href="#intro1">Animation</a></li>
-                        <li><a href="#intro2">Animation</a></li>
+                        <li><a href="#intro2">How to</a></li>
+                        <li><a href="#intro3">Basic</a></li>
+                        <li><a href="#intro4">Timing-function</a></li>
                     </ul>
                 </div>
             </div>
@@ -248,9 +329,28 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/prism.js"></script>
+    <script>
+        $(".btn1").click(function(){
+            // var width=  $('.circle1').width();
+            // $('.circle1').css({ 'width': 'calc(100% - ' + width+ 'px)' });
+            $(".circle1").addClass("colorChange");
+            $(".circle1").animate( {left:"80%"},1000).animate( {top:"80%" },1000)
+            .animate( {left:"0%" },1000).animate( {top:"0%" },1000);
+        });
+        
+        $(".btn2 > button").click(function(){
+            let easing = $(this).text();
+            $(".circle2")
+            .animate( {left:"80%"},1000, easing)
+            .animate( {top:"80%" },1000, easing)
+            .animate( {left:"0%" },1000, easing)
+            .animate( {top:"0%" },1000, easing);
+        });
+    </script>
 </body>
 
 </html>

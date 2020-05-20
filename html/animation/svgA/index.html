@@ -676,56 +676,93 @@
                                 c22.232-9.975,25.88,12.637,1.638,10.158C125,84.499,116.852,105.905,97.098,91.638z"/>
                         </svg>
                     </div>
-<pre class="line-numbers language-markup"><code>&lt;div class="svgBox"&gt;
-    &lt;svg class="svg"&gt;
-        &lt;rect class="aniRect1" fill="none" width="100" height="100"
-        x="30" y="30" /&gt;
-    &lt;/svg&gt;
-    &lt;svg class="svg"&gt;
-        &lt;rect class="aniRect2" fill="none" width="100" height="100"
-        x="30" y="30" /&gt;
-    &lt;/svg&gt;
-    &lt;svg class="svg"&gt;
-        &lt;rect class="aniRect3" fill="none" width="100" height="100"
-        x="30" y="30" /&gt;
-    &lt;/svg&gt;
-    &lt;svg class="svg"&gt;
-        &lt;rect class="aniRect4" fill="none" width="100" height="100"
-        x="30" y="30" /&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
-&lt;div class="svgBox"&gt;
-    &lt;svg class="svg"&gt;
-        &lt;path class="aniPath1" d="M53.465,64.655c96.029,61.373,63.365,91.218,10.888-9.948
-            c52.477,101.167,9.267,110.678,14.403-3.171c-5.137,113.849-47.314,100.484,14.06,4.455c-61.374,96.029-91.218,63.365,9.947,10.888
-            C1.598,119.355-7.915,76.146,105.936,81.281C-7.915,76.146,5.451,33.968,101.48,95.342c-96.03-61.374-63.365-91.218-10.889,9.947
-            C38.115,4.124,81.324-5.389,76.188,108.461c5.136-113.85,47.313-100.485-14.059-4.455c61.373-96.03,91.216-63.365-9.948-10.889
-            c101.165-52.477,110.678-9.268-3.171-14.403C162.859,83.85,149.494,126.027,53.465,64.655z"/&gt;
-    &lt;/svg&gt;
-    &lt;svg class="svg"&gt;
-        &lt;path class="aniPath2" d="M25.617,46.856c40.332,25.776,45.558,21.002,23.52-21.486
-            c22.039,42.488,28.952,40.965,31.111-6.852c-2.159,47.817,4.589,49.955,30.367,9.623c-25.778,40.332-21.003,45.559,21.488,23.52
-            c-42.491,22.039-40.969,28.953,6.85,31.113c-47.818-2.16-49.957,4.589-9.623,30.366c-40.334-25.777-45.561-21.003-23.52,21.488
-            C83.77,92.138,76.856,93.66,74.7,141.478c2.156-47.817-4.593-49.956-30.369-9.623c25.776-40.333,21.001-45.56-21.486-23.52
-            c42.487-22.04,40.965-28.953-6.851-31.107C63.81,79.382,65.949,72.633,25.617,46.856z"/&gt;
-    &lt;/svg&gt;
-    &lt;svg class="svg"&gt;
-        &lt;path class="aniPath3" d="M37.364,12.66c2.782,2.721-26.59,32.743-23.809,35.464
-            c2.782,2.722,32.154-27.299,34.937-24.577c2.781,2.721-26.59,32.743-23.809,35.464c2.782,2.722,32.155-27.299,34.937-24.577
-            c2.783,2.723-26.59,32.743-23.808,35.466c2.782,2.722,32.155-27.299,34.937-24.577S44.16,78.068,46.943,80.79
-            c2.782,2.722,32.153-27.3,34.935-24.579c2.78,2.72-26.591,32.742-23.811,35.461c2.781,2.722,32.154-27.299,34.935-24.578
-            c2.783,2.723-26.589,32.744-23.806,35.467s32.155-27.298,34.938-24.576c2.782,2.723-26.59,32.744-23.808,35.466
-            c2.784,2.724,32.156-27.298,34.939-24.574c2.782,2.722-26.589,32.743-23.807,35.465c2.784,2.725,32.157-27.296,34.941-24.571
-            c2.786,2.726-26.587,32.747-23.8,35.473c2.786,2.727,32.157-27.296,34.944-24.57"/&gt;
-    &lt;/svg&gt;
-    &lt;svg class="svg"&gt;
-        &lt;path class="aniPath4" d="M97.098,91.638c19.754,14.268,1.995,28.732-7.979,6.5
-            c9.975,22.232-12.637,25.88-10.158,1.638c-2.479,24.242-23.884,16.094-9.617-3.66c-14.268,19.754-28.732,1.995-6.499-7.979
-            c-22.233,9.975-25.88-12.637-1.639-10.159c-24.241-2.479-16.094-23.884,3.661-9.617c-19.755-14.268-1.996-28.732,7.979-6.499
-            c-9.975-22.233,12.636-25.88,10.158-1.638c2.479-24.242,23.884-16.095,9.618,3.66c14.266-19.755,28.731-1.996,6.499,7.979
-            c22.232-9.975,25.88,12.637,1.638,10.158C125,84.499,116.852,105.905,97.098,91.638z"/&gt;
-    &lt;/svg&gt;
-&lt;/div&gt;
+<pre class="line-numbers language-css"><code>.aniRect1 {
+    stroke: #880e4f; stroke-width: 18;
+    transform-origin: center center;
+    animation: rect1 4s infinite ease-in-out;
+}
+@keyframes rect1 {
+    0% {stroke: #880e4f; stroke-width: 18; transform: rotate(0deg);}
+    35% {stroke: #311b92; stroke-width: 1; transform: rotate(3600deg);}
+    70% {stroke: #004d40; stroke-width: 4; transform: rotate(3600deg);}
+    100% {stroke: #880e4f; stroke-width: 18; transform: rotate(0deg);}
+}
+.aniRect2 {
+    stroke: #880e4f; stroke-width: 4;
+    animation: rect2 4s infinite ease-in-out alternate;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    stroke-linecap: round;
+}
+@keyframes rect2 {
+    0% {stroke: #880e4f; stroke-dashoffset: 50;}
+    35% {stroke: #311b92; }
+    70% {stroke: #004d40; }
+    100% {stroke: #880e4f; stroke-dashoffset: 0;}
+}
+.aniRect3 {
+    stroke: #880e4f; stroke-width: 4;
+    animation: rect3 4s infinite ease-in-out alternate;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    stroke-linecap: round;
+}
+@keyframes rect3 {
+    0% {stroke: #880e4f; stroke-dashoffset: 400;}
+    35% {stroke: #311b92; stroke-width: 20;}
+    70% {stroke: #004d40; stroke-width: 1;}
+    100% {stroke: #880e4f; stroke-dashoffset: 0;}
+}
+.aniRect4 {
+    stroke: #880e4f; stroke-width: 4;
+    animation: rect4 4s infinite ease-in-out alternate;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    stroke-linecap: round;
+}
+@keyframes rect4 {
+    0% {stroke: #880e4f; stroke-dashoffset: 150;}
+    35% {stroke: #311b92; }
+    70% {stroke: #004d40; }
+    100% {stroke: #880e4f; stroke-dashoffset: 0;}
+}
+
+.aniPath1 {
+    fill: none; stroke: #880e4f; stroke-width: 2; stroke-linecap: round;
+    animation: path1 2s infinite linear alternate-reverse;
+    stroke-dasharray: 2027;
+}
+@keyframes path1 {
+    0% {stroke-dashoffset: 2027;}
+    100% {stroke-dashoffset: 0;}
+}
+.aniPath2 {
+    fill: none; stroke:#73BF43; stroke-width: 2;
+    animation: path2 2s infinite linear alternate-reverse;
+    stroke-dasharray: 943;
+}
+@keyframes path2 {
+    0% {stroke-dashoffset: 943;}
+    100% {stroke-dashoffset: 0;}
+}
+.aniPath3 {
+    fill: none; stroke:#EF4824; stroke-width: 2;
+    animation: path3 2s infinite linear alternate-reverse;
+    stroke-dasharray: 782; 
+}
+@keyframes path3 {
+    0% {stroke-dashoffset: 782;}
+    100% {stroke-dashoffset: 0;}
+}
+.aniPath4 {
+    fill: none; stroke:#6CBD44; stroke-width: 2;
+    animation: path4 2s infinite linear alternate-reverse;
+    stroke-dasharray: 499;
+}
+@keyframes path4 {
+    0% {stroke-dashoffset: 499;}
+    100% {stroke-dashoffset: 0;}
+}
 </code></pre>
                 </div>
                 <!-- //Intro7 -->
