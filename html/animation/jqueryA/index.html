@@ -335,20 +335,29 @@
     <script src="../../assets/js/prism.js"></script>
     <script>
         $(".btn1").click(function(){
-            // var width=  $('.circle1').width();
-            // $('.circle1').css({ 'width': 'calc(100% - ' + width+ 'px)' });
+            let aWidth = $(".box").width();
+            let width =  $('.circle1').width();
+            let vWidth  = aWidth-width;
+            let aHeight = $(".box").height();
+            let height =  $('.circle1').height();
+            let vHeight  = aHeight-height;
+
+            
             $(".circle1").addClass("colorChange");
-            $(".circle1").animate( {left:"80%"},1000).animate( {top:"80%" },1000)
-            .animate( {left:"0%" },1000).animate( {top:"0%" },1000);
+            $(".circle1").animate( {left:vWidth},1000)
+                        .animate( {top:vHeight},1000)
+                        .animate( {left:"0"},1000)
+                        .animate( {top:"0"},1000);
+         
         });
-        
         $(".btn2 > button").click(function(){
+            
             let easing = $(this).text();
             $(".circle2")
-            .animate( {left:"80%"},1000, easing)
-            .animate( {top:"80%" },1000, easing)
-            .animate( {left:"0%" },1000, easing)
-            .animate( {top:"0%" },1000, easing);
+            .animate( {left:vWidth},1000, easing)
+            .animate( {top:vHeight},1000, easing)
+            .animate( {left:"0" },1000, easing)
+            .animate( {top:"0" },1000, easing);
         });
     </script>
 </body>
