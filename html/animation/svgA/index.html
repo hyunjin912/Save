@@ -533,6 +533,104 @@
                 </div>
                 <!-- //Intro6 -->
 
+                <style>
+                    .aniRect1 {
+                        stroke: #880e4f; stroke-width: 18;
+                        transform-origin: center center;
+                        animation: rect1 4s infinite ease-in-out;
+                    }
+                    @keyframes rect1 {
+                        0% {stroke: #880e4f; stroke-width: 18; transform: rotate(0deg);}
+                        35% {stroke: #311b92; stroke-width: 1; transform: rotate(3600deg);}
+                        70% {stroke: #004d40; stroke-width: 4; transform: rotate(3600deg);}
+                        100% {stroke: #880e4f; stroke-width: 18; transform: rotate(0deg);}
+                    }
+                    .aniRect2 {
+                        stroke: #880e4f; stroke-width: 4;
+                        animation: rect2 4s infinite ease-in-out alternate;
+                        stroke-dasharray: 50;
+                        stroke-dashoffset: 50;
+                        stroke-linecap: round;
+                    }
+                    @keyframes rect2 {
+                        0% {stroke: #880e4f; stroke-dashoffset: 50;}
+                        35% {stroke: #311b92; }
+                        70% {stroke: #004d40; }
+                        100% {stroke: #880e4f; stroke-dashoffset: 0;}
+                    }
+                    .aniRect3 {
+                        stroke: #880e4f; stroke-width: 4;
+                        animation: rect3 4s infinite ease-in-out alternate;
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400;
+                        stroke-linecap: round;
+                    }
+                    @keyframes rect3 {
+                        0% {stroke: #880e4f; stroke-dashoffset: 400;}
+                        35% {stroke: #311b92; stroke-width: 20;}
+                        70% {stroke: #004d40; stroke-width: 1;}
+                        100% {stroke: #880e4f; stroke-dashoffset: 0;}
+                    }
+                    .aniRect4 {
+                        stroke: #880e4f; stroke-width: 4;
+                        animation: rect4 4s infinite ease-in-out alternate;
+                        stroke-dasharray: 150;
+                        stroke-dashoffset: 150;
+                        stroke-linecap: round;
+                    }
+                    @keyframes rect4 {
+                        0% {stroke: #880e4f; stroke-dashoffset: 150;}
+                        35% {stroke: #311b92; }
+                        70% {stroke: #004d40; }
+                        100% {stroke: #880e4f; stroke-dashoffset: 0;}
+                    }
+
+                    .aniPath1 {
+                        fill: none; stroke: #880e4f; stroke-width: 2; stroke-linecap: round;
+                        animation: path1 2s infinite linear alternate-reverse;
+                        stroke-dasharray: 2200;
+                    }
+                    @keyframes path1 {
+                        0% {stroke-dashoffset: 2200;}
+                        100% {stroke-dashoffset: 0;}
+                    }
+                </style>
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Animation</h2>
+                    <h4>Sample</h4>
+                    <div class="svgBox">
+                        <svg class="svg">
+                            <rect class="aniRect1" fill="none" width="100" height="100"
+                            x="30" y="30" />
+                        </svg>
+                        <svg class="svg">
+                            <rect class="aniRect2" fill="none" width="100" height="100"
+                            x="30" y="30" />
+                        </svg>
+                        <svg class="svg">
+                            <rect class="aniRect3" fill="none" width="100" height="100"
+                            x="30" y="30" />
+                        </svg>
+                        <svg class="svg">
+                            <rect class="aniRect4" fill="none" width="100" height="100"
+                            x="30" y="30" />
+                        </svg>
+                    </div>
+                    <div class="svgBox">
+                        <svg class="svg">
+                            <path class="aniPath1" d="M53.465,64.655c96.029,61.373,63.365,91.218,10.888-9.948
+                                c52.477,101.167,9.267,110.678,14.403-3.171c-5.137,113.849-47.314,100.484,14.06,4.455c-61.374,96.029-91.218,63.365,9.947,10.888
+                                C1.598,119.355-7.915,76.146,105.936,81.281C-7.915,76.146,5.451,33.968,101.48,95.342c-96.03-61.374-63.365-91.218-10.889,9.947
+                                C38.115,4.124,81.324-5.389,76.188,108.461c5.136-113.85,47.313-100.485-14.059-4.455c61.373-96.03,91.216-63.365-9.948-10.889
+                                c101.165-52.477,110.678-9.268-3.171-14.403C162.859,83.85,149.494,126.027,53.465,64.655z"/>
+                        </svg>
+                    </div>
+<pre class="line-numbers language-markup"><code>
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
+
                
             </div>
             <!-- //col-md-9 -->
@@ -548,6 +646,7 @@
                         <li><a href="#intro4">line, polyline</a></li>
                         <li><a href="#intro5">path</a></li>
                         <li><a href="#intro6">clip-path</a></li>
+                        <li><a href="#intro7">Animation</a></li>
                     </ul>
                 </div>
             </div>
