@@ -1,0 +1,105 @@
+body {
+  background-image: url(../img/main.jpg);
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 0;
+  margin: 110px 0 60px;
+}
+
+.header h1 img {
+  width: 180px;
+}
+
+.header ul.nav {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header ul.nav li {
+  margin: 0 25px;
+}
+
+.header ul.nav li a {
+  position: relative;
+  color: #fff;
+}
+
+.header ul.nav li a:before {
+  content: '';
+  width: 100%;
+  height: 0;
+  background: #38ccdd;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
+}
+
+.header ul.nav li a:hover::before {
+  height: 2px;
+}
+
+.stit {
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  line-height: 25px;
+  color: #ffffff;
+  opacity: 0.4;
+}
+
+.btit {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 55px;
+}
+
+.imgWrap {
+  margin: 40px 0;
+}
+
+.imgWrap img {
+  width: 40px;
+}
+
+ul.hoverText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+ul.hoverText li {
+  margin-bottom: 10px;
+}
+
+ul.hoverText li:last-child {
+  margin-bottom: 0;
+}
+
+ul.hoverText li a {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

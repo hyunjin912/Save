@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="피디타임">
+    <meta name="author" content="skyhyunjinlee">
+    <title>피티다임 – No.1 Creative Partner</title>
+
+    <!-- meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta id="meta-ogtitle" property="og:title" content="0_Cover">
+    <meta id="meta-ogtype" property="og:type" content="article">
+    <meta id="meta-ogsitename" property="og:site_name" content="피티다임">
+    <meta id="meta-description" property="og:description" content="...">
+    <meta id="meta-twittercard" name="twitter:card" value="summary">
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- icon -->
+    <link rel="apple-touch-icon-precomposed" href="http://www.ptdigm.com/Portfolio_site/wp-content/uploads/2018/06/cropped-app_icon-180x180.png" />
+    <meta name="msapplication-TileImage" content="http://www.ptdigm.com/Portfolio_site/wp-content/uploads/2018/06/cropped-app_icon-270x270.png" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main id="main">
+        <div class="container">
+            <header class="header">
+                <h1><img src="img/logo.png" alt="로고"></h1>
+                <ul class="nav">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">works</a></li>
+                    <li><a href="#">consulting</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </header>
+            <div class="stit">
+                Beyond design,<br>
+                Presentation paradigm
+            </div>
+            <div class="btit">
+                프레젠테이션<br>
+                패러다임을 바꾸다!
+            </div>
+            <div class="imgWrap">
+                <img src="img/line.png" alt="">
+            </div>
+            <ul class="hoverText">
+                <li><a href="#" class="hover1">about</a></li>
+                <li><a href="#" class="hover2">model</a></li>
+                <li><a href="#" class="hover3">event</a></li>
+                <li><a href="#" class="hover4">support</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(".hover1").mouseover(function(){
+            $("body").css("background-image","url(img/about_hover.jpg");
+        });
+        $(".hover1").mouseleave(function(){
+            $("body").css("background-image","url(img/main.jpg");
+        });
+
+        $(".hover2").mouseover(function(){
+            $("body").css("background-image","url(img/model_hover.jpg");
+        });
+        $(".hover2").mouseleave(function(){
+            $("body").css("background-image","url(img/main.jpg");
+        });
+
+        $(".hover3").mouseover(function(){
+            $("body").css("background-image","url(img/event_hover.jpg");
+        });
+        $(".hover3").mouseleave(function(){
+            $("body").css("background-image","url(img/main.jpg");
+        });
+
+        $(".hover4").mouseover(function(){
+            $("body").css("background-image","url(img/support_hover.jpg");
+        });
+        $(".hover4").mouseleave(function(){
+            $("body").css("background-image","url(img/main.jpg");
+        });
+    </script>
+</body>
+
+</html>

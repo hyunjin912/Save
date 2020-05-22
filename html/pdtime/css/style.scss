@@ -1,0 +1,100 @@
+body {
+    background-image: url(../img/main.jpg);
+    background-size: cover;
+    //height: 100vh;
+    //100vh 사용하면 스크롤 생기는 이유는?
+    //백그라운드 이미지 height 없어도 보이는 이유는?
+}
+
+.container {
+    margin: 0 auto;
+    width: 1440px;
+    //body에 백그라운드 이미지 넣으니까 height없어도 됨 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: 110px 0 60px;
+    h1 {
+
+        img {
+            width: 180px;
+        }
+    }
+
+    ul.nav {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        li {
+            margin: 0 25px;
+
+            a {
+                position: relative;
+                color: #fff;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 0;
+                    background: #38ccdd;
+                    position: absolute; top: 27px; left: 0;
+                    transition: height 0.2s
+
+                
+                }
+                &:hover::before {
+                    height: 2px;
+                }
+            }
+        }
+    }
+}
+.stit {
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+    //max-width: 55%; 이거 왜 했을까?
+    color: #ffffff;
+    opacity: 0.4
+}
+
+.btit {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+}
+
+.imgWrap {
+    margin: 40px 0;
+
+    img {
+        width: 40px;
+    }
+}
+
+ul.hoverText {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    
+    li {
+       margin-bottom: 10px;
+
+       &:last-child {
+           margin-bottom: 0;
+       }
+
+       a {
+           color: #fff;
+       }
+    }
+}
