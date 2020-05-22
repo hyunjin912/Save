@@ -523,7 +523,7 @@
 
                 <!-- Intro11 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro11" class="page-header">Create</h2>
+                    <h2 id="intro11" class="page-header">Create1</h2>
                     <h4 class="btn11">animation 
                         <button>Start</button>  
                     </h4>
@@ -534,13 +534,7 @@
                     </div>
 <pre class="line-numbers language-html"><code>&lt;script&gt;
     $(".btn11").click(function(){
-        loop();
-        setTimeout(out, 60000);
-    });
-    function out(){
-        $(".circle11 > div").hide();
-    }
-    function loop(){
+        function loop(){
         $(".circle11 > div")
             .css("z-index","10")
             .animate( {left: "50%", borderRadius: "0%"},1000, "easeOutQuint" )
@@ -550,7 +544,13 @@
             .animate( {height: 50, width: 50, borderRadius: "50%"},"slow", "easeOutQuint" )
             .animate( {height: "60%", borderRadius: "50%"},"slow", "easeOutQuint" )
             .animate( {left: 0},"slow", "easeOutQuint", loop );
-    }
+        }
+        function out(){
+        $(".circle11 > div").hide();
+        }
+        loop();
+        setTimeout(out, 60000);
+    });
 &lt;/script&gt;
 </code></pre>
                 </div>
@@ -723,13 +723,7 @@
 
         //Create
         $(".btn11").click(function(){
-            loop();
-            setTimeout(out, 60000);
-        });
-        function out(){
-            $(".circle11 > div").hide();
-        }
-        function loop(){
+            function loop(){
             $(".circle11 > div")
                 .css("z-index","10")
                 .animate( {left: "50%", borderRadius: "0%"},1000, "easeOutQuint" )
@@ -739,7 +733,13 @@
                 .animate( {height: 50, width: 50, borderRadius: "50%"},"slow", "easeOutQuint" )
                 .animate( {height: "60%", borderRadius: "50%"},"slow", "easeOutQuint" )
                 .animate( {left: 0},"slow", "easeOutQuint", loop );
-        }
+            }
+            function out(){
+            $(".circle11 > div").hide();
+            }
+            loop();
+            setTimeout(out, 60000);
+        });
     </script>
 </body>
 
