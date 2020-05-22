@@ -1,22 +1,22 @@
-body {
+#main {
     background-image: url(../img/main.jpg);
-    background-size: cover;
-    //height: 100vh;
-    //100vh 사용하면 스크롤 생기는 이유는?
-    //백그라운드 이미지 height 없어도 보이는 이유는?
+    height: 100vh;
+    //#main으로 100vh하면 .header에 margin-top: 110px 라서 스크롤 생기는 것 같은데 이유는? 그래서 패딩으로 변경. 원래가 .header {padding: 110px 40px} 였다.
+    //130vh정도로 해야 실제 사이트와 이미지가 같아보이는데 스크롤이 생긴다 이유는?
+    //#main에 height 값이 없어도 다른 자식 태그들의 높이로 인해 백그라운드 이미지가 점차 커진다. 그래서 ul.hoverText에 padding-bottom: 243px;을 해도 되지만 어떤게 좋은 방법인지 물어보자.
+    
 }
 
 .container {
     margin: 0 auto;
     width: 1440px;
-    //body에 백그라운드 이미지 넣으니까 height없어도 됨 
 }
-
+/* 공통 헤더 부분 */
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 40px 0;
-    margin: 110px 0 60px;
+    padding: 150px 0 40px;
+    box-sizing: border-box;
     h1 {
 
         img {
@@ -51,10 +51,15 @@ body {
                 &:hover::before {
                     height: 2px;
                 }
+                span {
+                    color: #000;
+                }
             }
         }
     }
 }
+
+/* 메인 콘텐츠 */
 .stit {
     font-size: 20px;
     letter-spacing: 0.2px;
@@ -83,7 +88,6 @@ body {
 ul.hoverText {
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
     text-transform: uppercase;
     
     li {
@@ -95,6 +99,107 @@ ul.hoverText {
 
        a {
            color: #fff;
-       }
+       }  
     }
+}
+
+/* 어바웃 */
+.about-tit-wrap {
+    margin: 60px 0 50px;
+
+    .about-english-tit {
+        font-size: 65px;
+        font-weight: 700;
+        letter-spacing: -2px
+    }
+
+    .about-korean-tit {
+        font-size: 32px;
+        letter-spacing: -2.2px;
+    }
+}
+
+.about-banner {
+
+    img {
+        width: 100%; //이미지가 또 사이즈가 달라보인다 이유는?
+    }
+}
+
+.first-cont {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    .overview-tit {
+        padding-top: 50px;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: #1d1d1d;
+    }
+    .overview-cont {
+        padding-top: 50px;
+        font-size: 18.4px;
+        letter-spacing: -1.3px;
+        line-height: 28px;
+    }
+}
+
+.two-cont {
+    display: grid;
+    grid-template-columns: 27% 73%;
+
+    .ourservice-tit {
+        padding-top: 105px;
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: #1d1d1d;
+    }
+    .ourservice-cont {
+        padding-top: 100px;
+        margin-left: -2px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap : 15px;
+        box-sizing: border-box;
+
+    }
+}
+.mid-cont {
+    padding-right: 10px;
+    box-sizing: border-box;
+    
+    .mid-cont-img {
+        width: 100%;
+    }
+    .mid-cont-tit-eng {
+        font-size: 18.5px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-top: 15px;
+    }
+    .mid-cont-tit-kor {
+        font-size: 16px;
+        letter-spacing: -1.5px;
+    }
+    .mid-cont-line {
+
+        img {
+            margin: 20px 0;
+            width: 20px;
+        }
+    }
+    .mid-cont-cont {
+        font-size: 14.5px;
+        letter-spacing: -1.2px;
+        color: #545454;
+        margin-top: 0px;
+        line-height: 23px;
+    }
+}
+.mid-cont4, .mid-cont5, .mid-cont6 {
+    margin-top: 15px;
 }
