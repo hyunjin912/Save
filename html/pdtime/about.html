@@ -30,20 +30,29 @@
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
 <body>
     <div class="about-wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1><a href="index.html"><img src="img/about_logo.png" alt="로고"></a></h1>
+                    <ul class="nav">
+                        <li><a class="underline" href="about.html"><span>about</span></a></li>
+                        <li><a href="works.html"><span>works</span></a></li>
+                        <li><a href="#"><span>consulting</span></a></li>
+                        <li><a href="#"><span>contact</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+
         <div class="container">
-            <header class="header">
-                <h1><a href="index.html"><img src="img/about_logo.png" alt="로고"></a></h1>
-                <ul class="nav">
-                    <li><a href="about.html"><span>about</span></a></li>
-                    <li><a href="#"><span>works</span></a></li>
-                    <li><a href="#"><span>consulting</span></a></li>
-                    <li><a href="#"><span>contact</span></a></li>
-                </ul>
-            </header>
             <div class="about-tit-wrap">
                 <div class="about-english-tit">
                     No.1 Creative Partner.
@@ -53,10 +62,14 @@
                     제공하는 <strong>풀서비스 디자인 컨설팅 그룹</strong>입니다.
                 </div>
             </div>
+            <!-- //main-title -->
         </div>
+
         <div class="about-banner">
             <img src="img/about_banner.jpg" alt="">
         </div>  
+        <!-- //banner -->
+
         <div class="container">
             <div class="first-cont">
                 <div class="overview-tit">Overview .</div>
@@ -71,6 +84,8 @@
                     프레젠테이션 관련 모든 서비스를 제공하는 풀서비스 디자인 컨설팅 그룹입니다.
                 </div>
             </div>
+            <!-- //first-cont -->
+
             <div class="two-cont">
                 <div class="ourservice-tit">Our Service .</div>
                 <div class="ourservice-cont">
@@ -154,12 +169,70 @@
                     </div>
                 </div>
             </div>
+            <!-- //two-cont -->
+
+            <div class="three-cont">
+                <div class="clients-tit">Clients .</div>
+                <div class="clients-cont"><img src="img/about_client.jpg" alt=""></div>
+            </div>
+            <!-- //three-cont -->
+
+            <footer id="footer">
+                <div class="fcont1">서울특별시 서초구 강남대로 83길 34 나우빌딩 5층</div>
+                <div class="fcont2">등록번호 : 206-26-18904  /  대표자 : 김대우</div>
+                <div class="fcont3">
+                    Tel. <strong>02-6403-3046<br></strong>
+                    Mail. <strong>ptdigm@ptdigm.com<br></strong>
+                </div>
+                <div class="fcont4">COPYRIGHT ⓒ 2009 PT.DIGM Inc. All right Reserved.</div>
+
+                <a class="scrollUp" href="#"><i class="fas fa-angle-up"></i></a>
+                 <!-- //scrollUp -->
+
+            </footer>
+            <!-- //footer -->
         </div> 
     </div>
               
     <!-- script -->
     <script src="js/jquery.min.js"></script>
-    
+    <script>
+        let wHeight = $(window).height();         //브라우저 높이
+        let dHeight = $(document).height();       //문서 자체 높이
+        let hHeight = $(".header").outerHeight(); //헤더 높이
+
+        let moveScroll;   //스크롤 값을 감지하기 위한 변수 
+        let lastScrollTop = 0;  //스크롤의 마지막 위치의 값
+
+        $(window).scroll(function(){
+        moveScroll = true;
+        //console.log(moveScroll);
+        });
+
+        setInterval(function(){
+        if(moveScroll){
+            hasScroll();
+            moveScroll = false;
+        }
+            
+        moveScroll = 0;
+        //console.log(moveScroll);
+        },250);
+
+        function hasScroll(){
+        let wScroll = $(this).scrollTop();
+        //스크롤을 내렸을 때
+        if(wScroll > lastScrollTop){
+            $(".header").addClass("on");
+        } else {
+            //스크롤을 올렸을 때
+            if( wScroll + wHeight < dHeight ){
+            $(".header").removeClass("on");
+            }
+        }
+        lastScrollTop = wScroll;
+        }
+    </script>
 </body>
 
 </html>

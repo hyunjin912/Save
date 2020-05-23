@@ -362,7 +362,7 @@ ul.tab-menu li a span {
 }
 ul.tab-menu li:last-child a span {
     border: none;
-    padding-right: 0;
+    padding-right: 30px;
 }
 ul.tab-menu li a:hover {
     color: #636262;
