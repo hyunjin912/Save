@@ -30,10 +30,22 @@
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">    
 </head>
 
 <body>
     <div id="main">
+        <div class="notice">
+            <div class="notice-cont">
+                이 사이트는 포트폴리오를 위해 만들어진 사이트 입니다.
+            </div>
+            <div class="notice-btn">
+                <a class="notice-btn" href="#"><i class="fas fa-times"></i></a>
+            </div>
+           
+        </div>
         <div class="container">
             <header class="header">
                 <h1><a href="main.html"><img src="img/logo.png" alt="로고"></a></h1>
@@ -94,6 +106,10 @@
         });
         $(".hover4").mouseleave(function(){
             $("#main").css("background-image","url(img/main.jpg");
+        });
+
+        $(".notice-btn").click(function(){
+            $(".notice").slideUp();
         });
     </script>
 </body>

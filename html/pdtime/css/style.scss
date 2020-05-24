@@ -1,3 +1,35 @@
+.notice {
+    
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+
+    .notice-cont {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px; height: 500px;
+        background: #fff;
+        text-align: center;
+        line-height: 500px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .notice-btn {
+        position: absolute; top: 28%; left: 61%;
+        transform: translate(-50%, -50%);
+        
+        width: 50px; height: 50px;
+        a {
+            text-align: center;
+            font-size: 40px;
+            line-height: 50px;
+            color: black;
+        }
+    }
+}
+
 #main {
     background-image: url(../img/main.jpg);
     height: 100vh;
