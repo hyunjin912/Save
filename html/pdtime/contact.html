@@ -70,6 +70,9 @@
                 </div>
                 <div class="contact-img-box"><img src="img/contact_tit_img.jpg" alt=""></div>
             </div>
+            <div id="map"></div>
+
+
         </div>
 
         
@@ -78,7 +81,27 @@
               
     <!-- script -->
     <script src="js/jquery.min.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu6eO8L_jRHcdgTFa2UzjUpfMrWoyf92s&callback=initMap">
+            </script>
+
     <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: -25.344, lng: 131.036};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 4, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+            </script>
+            
+
+
+
+    <!-- <script>
         let wHeight = $(window).height();         //브라우저 높이
         let dHeight = $(document).height();       //문서 자체 높이
         let hHeight = $(".header").outerHeight(); //헤더 높이
@@ -114,7 +137,7 @@
         }
         lastScrollTop = wScroll;
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
