@@ -81,7 +81,7 @@
                                   헤더의 높이를 알아야 하는 것인가?
 } */
 
-/* 메인 콘텐츠 */
+/* main */
 .stit {
     font-size: 20px;
     letter-spacing: 0.2px;
@@ -141,6 +141,12 @@ ul.hoverText {
     .about-korean-tit {
         font-size: 32px;
         letter-spacing: -2.2px;
+    }
+    .consulting-korean-desc {
+        font-size: 18px;
+        letter-spacing: -1px;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 }
 
@@ -287,10 +293,135 @@ ul.hoverText {
             }
         }
     }
-
-
 }
 
+/* consulting */
+.consulting-tit-wrap {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin-top: 150px;
+    margin-bottom: 85px;
+    box-sizing: border-box;
+    
+    .consulting-tit-txt {
+        font-size: 22px;
+        letter-spacing: -0.5px;
+        color: #1d1d1d;
+    }
+    .consulting-tit-img {
+        
+        img {width: 100%;}
+    }
+}
+
+.consulting-case-wrap {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin-bottom: 300px;
+
+    .case-box {
+
+        .case-tit {
+            font-size: 19px;
+            letter-spacing: -0.5px;
+            color: #1d1d1d;
+        }
+        .case-desc {
+            font-size: 15px;
+            letter-spacing: -1.1px;
+            color: #6a6a6a;
+            margin-top: 7px;
+            line-height: 20px;
+        }
+    }
+    .case-img-box {
+
+        img {display: block;}
+        .dotline {
+            margin: 100px 0;
+        }
+    }
+}
+
+/* contact */
+.contact-tit-wrap {
+    display: grid;
+    grid-template-columns: 65% 35%;
+
+    .contact-txt-box {
+        margin-top: 120px;
+
+        .txt-eng {
+            font-size: 68px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+        .txt-kor {
+            padding-right: 90px;
+            font-size: 33px;
+            line-height: 45px;
+            letter-spacing: -2.5px;
+            margin-bottom: 30px;
+        }
+        .txt-tel {
+            font-size: 23px;
+            letter-spacing: -0.4px;
+            margin-bottom: 33px;
+
+            span {
+                color: #4d4d4d;
+            }
+            a {
+                position: relative;
+
+                &:hover {
+                    color: #000;
+                }
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 0;
+                    background: #38ccdd;
+                    position: absolute; top: 32px; left: 0;
+                    transition: height 0.2s
+                }
+
+                &:hover:before {
+                    height: 2px;
+                }
+            }
+        }
+        .txt-btn {
+
+            a {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 0;
+                    background: #38ccdd;
+                    position: absolute; top: 60px; left: 0;
+                    transition: height 0.2s
+                } 
+
+                &:hover:before {
+                    height: 2px;
+                }
+
+                img {width: 230px;}
+            }
+            
+        }
+    }
+    .contact-img-box {
+        margin-top: 120px;
+
+        img {width: 100%;  }
+    }
+}
 
 /* 공통 푸터 부분 */
 #footer {
