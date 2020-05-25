@@ -246,7 +246,10 @@
     <script src="js/jquery-ui.min.js"></script>
     <script>
         $(window).scroll(function(){
-            console.log($(window).height()/2);
+            console.log("1. window height: "+$(window).height()/2);
+
+            console.log("2. window scrollTop: "+$(window).scrollTop());
+            
             const scrollTop = $(window).scrollTop() + $(window).height()/2;
             $(".scrollTop").text(scrollTop);
 
