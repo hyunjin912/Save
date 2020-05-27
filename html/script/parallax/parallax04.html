@@ -7,6 +7,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+         @font-face { 
+            font-family: 'GmarketSansMedium'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal;
+        }
+
         * {margin: 0; padding: 0; box-sizing: border-box;}
         li {list-style: none;}
         a {text-decoration: none; color: #fff;}
@@ -27,6 +35,29 @@
             background-color: var(--color-bg);
             font-family: var(--font-family);
             color: var(--color-title);
+        }
+
+        .title {
+            position: fixed; top: 0; right: 0; z-index: 1000;
+            padding: 20px;
+            font-family: 'GmarketSansMedium';
+            text-align: right;
+        }
+        .title h1 {
+            margin-bottom: 10px;
+        }
+        .title p {
+            font-size: 18px;
+        }
+        .title ul {
+            padding: 20px 0;
+            font-family: "Abel";
+        }
+        .title li {
+            padding-bottom: 5px;
+        }
+        .title li.active a {
+            border-bottom: 1px dashed #fff;
         }
 
         #wrap h1 {
@@ -132,7 +163,7 @@
 
         /* info */
         .info {
-            position: fixed; top: 20px; right: 20px;
+            position: fixed; top: 370px; right: 20px;
             background: rgba(255,255,255,0.4);
             color: #fff; padding: 10px;
             font-size: 14px; font-weight: 300;
@@ -150,6 +181,20 @@
     </style>
 </head>
 <body>
+    <div class="title">
+        <h1>Parallax04</h1>
+        <p>Parallax Effect<br>-javascript</p>
+        <ul>
+            <li><a href="parallax01.html">parallax01</a></li>
+            <li><a href="parallax02.html">parallax02</a></li>
+            <li><a href="parallax03.html">parallax03</a></li>
+            <li class="active"><a href="parallax04.html">parallax04</a></li>
+            <li><a href="parallax05.html">parallax05</a></li>
+            <li><a href="parallax06.html">parallax06</a></li>
+            <li><a href="parallax07.html">parallax07</a></li>
+            <li><a href="parallax08.html">parallax08</a></li>
+        </ul>
+    </div>
 
     <div class="info">
         <span>pageYOffset() : <strong class="pageYOffset">0</strong>px</span><br>
