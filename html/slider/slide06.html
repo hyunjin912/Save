@@ -136,8 +136,11 @@
        let slideHeight = sliders.height();
        let slideTotalWidth = slideCount * slideWidth;
 
+        console.log(slideTotalWidth)
     //    sliders.css( {width: slideWidth, height: slideHeight} ); 없어도 괜찮다
+
        sliderImg.css( {width: slideTotalWidth, height: slideHeight, marginLeft: -slideWidth } );
+
        /* 위 코드에서  marginLeft: -slideWidth가 없으면 오른쪽버튼 눌렀을 때는 문제없이 작동하지만 
         왼쪽버튼을 눌렀을 때는 이미지가 잠시 안보였다가 보인다. 이것을 방지하기 위해
         marginLeft: -slideWidth을 줘서 처음이미지 왼쪽에 왼쪽버튼을 눌렀을 경우 보여질 이미지를 미리 준비해둬서
