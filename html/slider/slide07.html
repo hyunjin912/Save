@@ -137,6 +137,7 @@
         let slideWidth = sliders.outerWidth();
         let slideTotalWidth = slideCount * slideWidth;
         let currentIndex = 0;
+
         let slideCopy = sliders.clone();
         sliderImg.append(slideCopy);        //슬라이더 이미지를 카피 후 추가
         
@@ -144,7 +145,7 @@
         //이미지 움직이기
         function moveLeft(){
             //이미지를 오른쪽으로 이동
-            
+
             if(currentIndex == 0){
                 currentIndex = 5;
                 sliderImg.css("margin-left", -(slideWidth * currentIndex)+"px");
