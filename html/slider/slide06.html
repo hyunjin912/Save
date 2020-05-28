@@ -143,7 +143,7 @@
        function moveLeft(){
             sliderImg.animate( {left: slideWidth}, 400, function(){
                 $(".slides:last-child").prependTo(sliderImg);
-                $(sliderImg).css("left","");
+                $(sliderImg).css("left",""); //0을 입력해도 기능은 한다. 왜 입력안하는지 물어보자
             } );
        };
 

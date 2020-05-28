@@ -48,6 +48,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -112,9 +113,39 @@
 
 
     <!-- contents_tit -->
+    <style>
+        .svgWrap {
+        width: 100%;
+        font-family: 'Abril Fatface', cursive;
+        background-color: #e3f2fd;
+        }
+        .aniText {
+        font-size: 100px;
+        stroke: #365fa0;
+        stroke-width: 2;
+        animation: stroke 5s infinite alternate;
+        }
+        @keyframes stroke {
+            0% {
+                fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+            }
+            70% {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);}
+            80% {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);}
+            100% {
+                fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50 0%;
+            }
+        }
+    </style>
     <div id="contents_tit">
         <div class="titt">
-            <p><a href="#" class="tit_btn">&quot;나는 이현진이다&quot;</a></p>
+            <svg class="svgWrap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="1000px" height="160px" viewBox="0 0 1000 160" enable-background="new 0 0 1000 300" xml:space="preserve">
+                <text class="aniText" x="330" y="100">hyunjin</text>
+            </svg>
         </div>
     </div>
     <!-- //contents_tit -->
